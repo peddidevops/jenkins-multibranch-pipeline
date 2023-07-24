@@ -9,12 +9,12 @@ pipeline {
         }
         stage('paralalle'){
             parallel {
-                stage(p-1){
+                stage('p-1'){
                     steps {
                         sh 'echo "p-1"'
                     }
                 }
-                stage(p-2){
+                stage('p-2'){
                     steps {
                         sh 'echo "p-2"'
                     }
