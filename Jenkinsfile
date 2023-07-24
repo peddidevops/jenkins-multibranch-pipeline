@@ -1,34 +1,29 @@
 pipeline {
     agent none
     stages {
-        stage('Hello-peddi') {
-                    steps {
-                        echo "hellow peddi"
-                    }
-                }
-        stage('parallel-one') {
+        stage('Hello Peddi-reddy') {
+            steps {
+                echo 'pddireddy welcome'
+            }
+        }
+        stage('parallel') {
             parallel {
-                stage('parallel-1') {
+                stage('p-1') {
                     steps {
-                        sh 'echo "peddiredy welcome"'
+                        sh 'echo "peddireddy p-1"'
                     }
                 }
-                stage('Parallel-2') {
+                stage('p-2') {
                     steps {
-                        sh '''
-                        echo "jana"
-                        pwd
-                        touch peddi.txt
-                        ls
-                        '''
+                        sh 'echo "peddireddy p-2"'
                     }
                 }
             }
         }
-        stage('Hello-peddireddy') {
-                    steps {
-                        echo "hellow peddi jana"
-                    }
-                }
+        stage('Hello Peddi') {
+            steps {
+                echo 'Hello World'
+            }
+        }
     }
 }
